@@ -9,10 +9,19 @@ const fetch = axios.create({
   timeOut: 5000
 })
 
+const userStorage = function() {
+  return DingTalkApi.util.domainStorage.getItem({ name: 'loginuser' }).then(res => {
+    dAlert(JSON.stringify(res))
+    window.localStorage.setItem('ding_user_id', res.userid || '')
+    return res.userid || ''
+  })
+}
+
 fetch.interceptors.request.use(
   config => {
     if (config.url !== API.DINGTALK_USERID) {
       config.headers.common['Authorization'] = vuet.modules.home._LOGINUSER_.token
+      config.headers.common['ding_user_id'] = userStorage() /* 'A011814' */
     }
     return config
   },
@@ -47,7 +56,7 @@ fetch.interceptors.response.use(
           break
       }
       if (error.response.status === 401) {
-        window.location.reload()
+        // window.location.reload()
       } else if (errMsg) {
         dd.device.notification.alert({
           message: errMsg || error.response.msg || '',
