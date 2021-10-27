@@ -8,6 +8,10 @@ export const API = {
   DINGTALK_GET_APPROVAL_PROGRESS: 'dingtalk/oa/common/transaction/submit'
 }
 
+export const API2 = {
+  GET_INFO: 'vaporize/vaporizeBlackDenseInput/init'
+}
+
 export default {
   DINTALK_API,
   CORP_ID,
