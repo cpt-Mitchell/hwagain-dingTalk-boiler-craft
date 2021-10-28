@@ -95,9 +95,9 @@ export default {
         cancelButton: '取消', // 取消按钮文本
         otherButtons: this.remarkOptions,
         onSuccess: result => {
-          if (result.buttonIndex !== -1 && result.buttonIndex !== 0) {
+          if (result.buttonIndex > 0) {
             item.remark = this.remarkOptions[result.buttonIndex]
-          } else if (result.buttonIndex === 0) {
+          } else {
             item.remark = ''
           }
           // onSuccess将在点击button之后回调
