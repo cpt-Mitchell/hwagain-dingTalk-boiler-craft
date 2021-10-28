@@ -9,7 +9,8 @@ export const API = {
 }
 
 export const API2 = {
-  GET_INFO: 'vaporize/vaporizeBlackDenseInput/init'
+  GET_INFO: 'hwagain-boiler-craft/vaporize/vaporizeBlackDenseInput/init',
+  POST_INFO: 'hwagain-boiler-craft/vaporize/vaporizeBlackDenseInput/add'
 }
 
 export default {

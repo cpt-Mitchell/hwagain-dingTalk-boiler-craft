@@ -28,7 +28,7 @@ module.exports = {
   // pages, // 多页
   outputDir: process.env.outputDir || 'dist', // 'dist', 生产环境构建文件的目录
   assetsDir: '', // 相对于outputDir的静态资源(js、css、img、fonts)目录
-  publicPath: process.env.NODE_ENV === 'production' ? '/hwagain-dingtalk-oa/approval-progress-enquiry/' : '/',
+  publicPath: process.env.VUE_APP_PUBLIC_PATH,
   lintOnSave: true,
   // runtimeCompiler: true,
   productionSourceMap: false, // 生产环境的 source map

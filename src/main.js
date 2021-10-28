@@ -3,7 +3,7 @@ import App from './App'
 import router from './router'
 import vuet from '@/vuet'
 import { initPlugins } from '@/utils/commonPlugins'
-import './permission'
+import '@/permission'
 
 Vue.config.productionTip = false
 initPlugins(Vue)

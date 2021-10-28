@@ -5,7 +5,9 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "build-dev": "vue-cli-service build --mode sit",
+    "deploy": "yarn build-dev && node ./app.js"
   },
   "dependencies": {
     "axios": "^0.18.0",
@@ -15,6 +17,7 @@
     "postcss-px2rem": "^0.3.0",
     "px2rem-loader": "^0.1.9",
     "register-service-worker": "^1.5.2",
+    "simple-sftp-deploy": "^0.3.0",
     "vue": "^2.6.6",
     "vue-router": "^3.0.1",
     "vue-scroller": "^2.2.4",
